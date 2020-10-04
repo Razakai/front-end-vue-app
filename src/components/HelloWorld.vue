@@ -38,6 +38,12 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+
+  data: () => {
+    return {
+      cool: 'Awesome mannnn'
+    }
   }
 }
 </script>
