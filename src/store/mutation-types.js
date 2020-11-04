@@ -1,0 +1,3 @@
+export const RESET_STATE = 'RESET_STATE'
+export const SET_LOGGEDIN = 'SET_LOGGEDIN'
+export const CREATE_EVENT = 'CREATE_EVENT'

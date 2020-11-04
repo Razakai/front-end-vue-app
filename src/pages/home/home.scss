@@ -1,0 +1,15 @@
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.homeContainer-information{
+  flex: auto;
+}
+
+.homeContainer-register{
+  flex: auto;
+}

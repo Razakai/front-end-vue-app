@@ -1,0 +1,19 @@
+.registerContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 35px;
+}
+
+.registerContainer-row{
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.registerContainer-btn{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 125px;
+}

@@ -1,0 +1,31 @@
+<template>
+  <div class="nav">
+    <span v-if="isLoggedIn" class="nav-container">
+      <span class="nav__left">
+        <router-link to="/" class="router-link">Home</router-link>
+        <router-link to="/about" class="router-link">About</router-link>
+        <router-link to="/welcome" class="router-link">Welcome Page</router-link>
+      </span>
+      <span class="nav__right">
+        <router-link to="/welcome" class="router-link">Profile</router-link>
+        <g-button @click="logout"> Logout </g-button>
+      </span>
+    </span>
+    <span v-else class="nav__right">
+     <text-input
+       class="nav__right-input"
+       v-model="username"
+       :placeholder="'Username'">
+     </text-input>
+      <text-input
+        class="nav__right-input"
+        v-model="password"
+        :placeholder="'Password'">
+     </text-input>
+      <g-button @click="login"> Login </g-button>
+  </span>
+  </div>
+  <router-view/>
+</template>
+<style src="./app.scss" lang="scss"></style>
+<script src="./app.js"></script>

@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import welcome from '../views/welcomePage/welcome.vue'
+import Home from '../pages/home/home.vue'
+import welcome from '../pages/welcomePage/welcome.vue'
+import about from '../pages/About.vue'
+import createStore from '../store/index.js'
 
 const routes = [
   {
@@ -11,21 +13,37 @@ const routes = [
   {
     path: '/welcome',
     name: 'Welcome',
-    component: welcome
+    component: welcome,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: about
+  },
+  {
+    path: '/:catchAll(.*)',
+    redirect: '/'
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!createStore.getters.getIsLoggedIn) {
+      next({ path: '/' })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
 })
 
 export default router

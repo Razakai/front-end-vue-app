@@ -9,4 +9,4 @@
   </div>
 </template>
 <script src="./welcome.js"></script>
-<style src="./welcome.css"></style>
+<style src="./welcome.scss" lang="scss"></style>
