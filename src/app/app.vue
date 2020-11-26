@@ -1,5 +1,6 @@
 <template>
   <div class="nav">
+    <img src="../assets/citLogo.jpg" height="100" width="200">
     <span v-if="isLoggedIn" class="nav-container">
       <span class="nav__left">
         <router-link to="/" class="router-link">Home</router-link>
@@ -7,7 +8,7 @@
         <router-link to="/welcome" class="router-link">Welcome Page</router-link>
       </span>
       <span class="nav__right">
-        <router-link to="/welcome" class="router-link">Profile</router-link>
+        <router-link to="/profile" class="router-link">Profile</router-link>
         <g-button @click="logout"> Logout </g-button>
       </span>
     </span>

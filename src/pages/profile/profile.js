@@ -1,11 +1,12 @@
+import TextInput from '../../components/sections/TextInput/TextInput.vue'
 import GButton from '@/components/sections/GButton/GButton.vue'
-import TextInput from '@/components/sections/TextInput/TextInput.vue'
+
 export default {
-  name: 'register',
+  name: 'profile',
 
   components: {
-    GButton,
-    TextInput
+    TextInput,
+    GButton
   },
 
   data: () => {
@@ -22,20 +23,8 @@ export default {
       status: '', // student, staff, neither
       membership: '', // one year, open ended
       username: '',
-      password: ''
-
-    }
-  },
-
-  watch: {
-    firstName () {
-      console.log(this.firstName.length)
-    },
-    status () {
-      console.log(this.status)
-    },
-    membership () {
-      console.log(this.membership)
+      password: '',
+      test: ''
     }
   },
 
@@ -44,6 +33,10 @@ export default {
   },
 
   methods: {
+    getUserDetails () {
+      return this.$store.getters.getLoggedInUser
+    },
+
     isFormFilled () {
       if (
         this.firstName.length > 0 &&
@@ -63,9 +56,9 @@ export default {
       return false
     },
 
-    async register () {
+    async updateProfile () {
       if (this.isFormFilled()) {
-        await this.$store.dispatch('createUser', {
+        await this.$store.dispatch('updateUser', {
           details: {
             firstName: this.firstName,
             lastName: this.lastName,
@@ -82,11 +75,27 @@ export default {
             password: this.password
           }
         })
-        await this.$router.push('/about')
       }
-    },
-    getIsLoggedIn () {
-      return this.$store.getters.getIsLoggedIn()
     }
+
+  },
+
+  created () {
+    // console.log('before mount')
+    const user = this.getUserDetails()
+    console.log(user.firstName)
+    this.firstName = user.firstName
+    this.lastName = user.lastName
+    this.gender = user.gender
+    this.age = user.age
+    this.weight = user.weight
+    this.height = user.height
+    this.address = user.address
+    this.email = user.email
+    this.phoneNumber = user.phoneNumber
+    this.status = user.status
+    this.membership = user.membership
+    this.username = user.username
+    this.password = user.password
   }
 }

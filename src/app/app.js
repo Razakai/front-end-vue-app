@@ -24,11 +24,11 @@ export default {
   },
   methods: {
     login () {
-      this.$store.dispatch('setLoginStatus', true)
+      this.$store.dispatch('login', { username: this.username, password: this.password })
     },
-    logout () {
-      this.$store.dispatch('setLoginStatus', false)
-      window.location.href = '/'
+    async logout () {
+      this.$store.dispatch('logout', false)
+      await this.$router.push('/')
     }
   }
 }

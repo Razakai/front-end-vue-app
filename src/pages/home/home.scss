@@ -1,9 +1,15 @@
+.p-home{
+  display: flex;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+}
+
 .homeContainer {
   display: flex;
   flex-direction: row;
   flex: 1;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .homeContainer-information{
@@ -12,4 +18,11 @@
 
 .homeContainer-register{
   flex: auto;
+  overflow: auto;
+}
+
+.homeFooter{
+  bottom: 12px;
+  position: fixed;
+  width: 100%;
 }

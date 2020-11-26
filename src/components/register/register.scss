@@ -1,19 +1,28 @@
 .registerContainer{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-right: 35px;
+  //width: 100%;
+  //height: 100%;
 }
 
 .registerContainer-row{
   padding-bottom: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
 }
 
 .registerContainer-btn{
   display: flex;
-  justify-content: flex-end;
-  margin-right: 125px;
+  margin: auto;
+}
+
+.registerContainer-row-radio{
+  display: flex;
+  padding: 5px 0px 5px 0px;
+  margin: auto;
+
+}
+
+.registerInput{
+  width: 100%;
 }

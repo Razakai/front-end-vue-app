@@ -1,0 +1,40 @@
+.p-profile{
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.profile-container{
+  margin: auto;
+  flex: 1;
+  max-width: 500px;
+
+}
+
+.profileContainer-row{
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.profileContainer-row-radio{
+  padding: 5px 0px 5px 0px;
+  margin: auto;
+}
+
+.profileInput{
+  width: 100%;
+}
+
+.profileContainer-inputLabel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 13px 0px 13px;
+}
+
+.profileContainer-btn {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}

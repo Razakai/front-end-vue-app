@@ -1,6 +1,6 @@
 <template>
   <label class="w-text-input">
-    <input
+   <input
       class="w-text-input__text-input"
       ref="input"
       type="text"

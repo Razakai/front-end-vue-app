@@ -1,8 +1,7 @@
 <template>
   <button
     class="w-button"
-    @click="onClick"
-    :disabled="disabled">
+    @click="onClick">
     <slot/>
   </button>
 </template>
