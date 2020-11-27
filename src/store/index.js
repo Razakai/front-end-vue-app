@@ -38,6 +38,21 @@ export default createStore({
             membership: 'oneYear', // one year, open ended
             username: 'test2',
             password: 'test2'
+          },
+          {
+            firstName: 'Tash2',
+            lastName: 'Hayes2',
+            gender: 'female2',
+            age: '222',
+            weight: '1802',
+            height: '5.82',
+            address: 'kinsale',
+            email: 'qwerty@gmail.com',
+            phoneNumber: '08584012345',
+            status: 'student', // student, staff, neither
+            membership: 'oneYear', // one year, open ended
+            username: 'test22',
+            password: 'test22'
           }
         ]
     },
@@ -70,16 +85,20 @@ export default createStore({
     editEvents ({ commit }, { event }) {
       commit(types.CREATE_EVENT, event)
     },
-    updateUser ({ commit, getters }, { details }) {
-      const userIndex = getters.getUsers.map(
+    updateUser ({ commit, getters }, { details, usernameUpdated }) {
+      const userIndex = getters.getUsers({ includeCurrentUser: true }).map(
         e => e.username
       ).indexOf(getters.getLoggedInUserUsername)
+
       if (userIndex >= 0) {
         commit(types.UPDATE_USER, { details, index: userIndex })
+        if (usernameUpdated) {
+          commit(types.SET_ISLOGGEDIN, details.username)
+        }
       }
     },
     login ({ commit, getters }, { username, password }) {
-      const users = getters.getUsers.some(
+      const users = getters.getUsers({ includeCurrentUser: true }).some(
         user => user.username === username && user.password === password
       )
       if (users) {
@@ -88,7 +107,7 @@ export default createStore({
       }
     },
     createUser ({ commit, getters }, { details }) {
-      const users = getters.getUsers.some(
+      const users = getters.getUsers({ includeCurrentUser: true }).some(
         user => user.email === details.email
       )
       if (!users) {
@@ -102,8 +121,13 @@ export default createStore({
     getEvents: (state) => {
       return state.types.events
     },
-    getUsers: (state) => {
-      return state.types.users
+    getUsers: (state, getters) => ({ includeCurrentUser }) => {
+      if (includeCurrentUser) {
+        return state.types.users
+      }
+      return state.types.users.filter(
+        user => user.username !== getters.getLoggedInUserUsername
+      )
     },
     getLoggedInUserUsername: (state) => {
       return state.isLoggedIn

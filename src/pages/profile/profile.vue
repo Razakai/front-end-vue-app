@@ -66,6 +66,8 @@
       <section class="profileContainer-btn">
         <g-button @click="updateProfile">Update Profile</g-button>
       </section>
+      <span v-if="profileUpdated && passwordUpdated">Profile Updated, password changed</span>
+      <span v-else-if="profileUpdated">Profile Updated</span>
 
     </section>
   </main>
