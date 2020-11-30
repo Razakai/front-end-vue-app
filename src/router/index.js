@@ -4,6 +4,7 @@ import welcome from '../pages/welcomePage/welcome.vue'
 import about from '../pages/About.vue'
 import profile from '../pages/profile/profile.vue'
 import clubs from '../pages/clubs/clubs.vue'
+import bookings from '../pages/bookings/bookings.vue'
 import createStore from '../store/index.js'
 
 const routes = [
@@ -38,6 +39,14 @@ const routes = [
     path: '/clubs',
     name: 'Clubs',
     component: clubs,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/bookings',
+    name: 'Bookings',
+    component: bookings,
     meta: {
       requiresAuth: true
     }

@@ -7,6 +7,7 @@
         <router-link to="/about" class="router-link">About</router-link>
         <router-link to="/welcome" class="router-link">Welcome Page</router-link>
         <router-link to="/clubs" class="router-link">Clubs</router-link>
+        <router-link to="/bookings" class="router-link">Bookings</router-link>
       </span>
       <span class="nav-container__right">
         <router-link to="/profile" class="router-link">Profile</router-link>

@@ -14,13 +14,17 @@ export default {
   },
 
   computed: {
-    appDescription () {
-      // return this.app.description
-    }
+
   },
 
-  createdBy () {
-    return 'Teamwork'
+  methods: {
+    joinClub () {
+      this.$emit('join-club')
+    },
+
+    createAppointment () {
+      this.$emit('create-appointment')
+    }
   }
 
 }

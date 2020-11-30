@@ -17,7 +17,7 @@
   height: 45px;
   display: flex;
   flex-direction: row;
-  padding: 16px 16px 55px;
+  padding: 16px 16px 15px;
 }
 
 .club-card__club-icon {
@@ -61,7 +61,7 @@
 }
 
 .club-card__additional-information__button{
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
 }
 

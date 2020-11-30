@@ -70,7 +70,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '18-12-2020'
         },
         {
           name: 'club2',
@@ -79,7 +80,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '19-12-2020'
         },
         {
           name: 'club3',
@@ -88,7 +90,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '20-12-2020'
         },
         {
           name: 'club4',
@@ -97,7 +100,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '16-12-2020'
         },
         {
           name: 'club5',
@@ -106,7 +110,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '11-12-2020'
         },
         {
           name: 'club6',
@@ -115,7 +120,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '25-12-2020'
         },
         {
           name: 'club7',
@@ -124,7 +130,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '29-12-2020'
         },
         {
           name: 'club8',
@@ -133,7 +140,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '15-12-2020'
         },
         {
           name: 'club9',
@@ -142,7 +150,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '18-12-2020'
         },
         {
           name: 'club10',
@@ -151,7 +160,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '8-12-2020'
         },
         {
           name: 'club11',
@@ -160,7 +170,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '5-12-2020'
         },
         {
           name: 'club12',
@@ -169,7 +180,8 @@ export default createStore({
           trainer: 'John',
           duration: '60',
           calories: '500',
-          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '26-12-2020'
         }
       ]
     },
@@ -234,6 +246,27 @@ export default createStore({
       }
       console.log(getters.getLoggedInUser.clubs)
     },
+
+    addUserAppointment ({ commit, getters }, name) {
+      const user = getters.getLoggedInUser
+      const userAppointments = user.appointments
+
+      const userIndex = getters.getUsers({ includeCurrentUser: true }).map(
+        e => e.username
+      ).indexOf(user.username)
+
+      if (!userAppointments.includes(name)) {
+        userAppointments.push(name)
+        commit(types.UPDATE_USER, {
+          details: {
+            appointments: userAppointments
+          },
+          index: userIndex
+        })
+      }
+      console.log(getters.getLoggedInUser.appointments)
+    },
+
     login ({ commit, getters }, { username, password }) {
       const users = getters.getUsers({ includeCurrentUser: true }).some(
         user => user.username === username && user.password === password
@@ -282,6 +315,14 @@ export default createStore({
     },
     getClubs: (state) => {
       return state.types.clubs
+    },
+    getBookings: (state, getters) => ({ getAppointments }) => {
+      if (getAppointments) {
+        const userAppointments = getters.getLoggedInUser.appointments
+        return getters.getClubs.filter(club => userAppointments.includes(club.name))
+      }
+      const userBookings = getters.getLoggedInUser.clubs
+      return getters.getClubs.filter(club => userBookings.includes(club.name))
     }
   }
 })

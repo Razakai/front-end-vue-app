@@ -11,7 +11,8 @@
         {{ club.name }}
       </div>
       <div class="club-card__description">
-        Facility: <span class="club-card__bold-text">{{ club.facility }}</span>
+        Facility: <span class="club-card__bold-text">{{ club.facility }}</span><br>
+        Date: <span class="club-card__bold-text">{{ club.date }}</span>
       </div>
       <div class="club-card__additional-information">
         <div class="club-card__additional-information__row">
@@ -31,7 +32,8 @@
           </div>
         </div>
         <div class="club-card__additional-information__button">
-          <g-button>Join Club</g-button>
+          <g-button @click="joinClub">Join Club</g-button>
+          <g-button @click="createAppointment">Create Appointment</g-button>
         </div>
       </div>
     </div>

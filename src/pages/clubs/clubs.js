@@ -13,7 +13,7 @@ export default {
   data: () => {
     return {
       searchTerm: '',
-      multiselect: '',
+      multiselect: 'name',
       sortByCalories: false
     }
   },
@@ -31,7 +31,13 @@ export default {
 
   methods: {
     async addUserClub (name) {
+      console.log(name)
       await this.$store.dispatch('addUserClub', name)
+    },
+
+    async addUserAppointment (name) {
+      console.log('appointment', name)
+      await this.$store.dispatch('addUserAppointment', name)
     }
 
   },
