@@ -1,0 +1,56 @@
+.browse-clubs{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 35px 0;
+}
+
+.browse-clubs__body{
+  margin: 0px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.browse-clubs__list-wrapper{
+  overflow: scroll;
+}
+
+.browse-clubs__content{
+  display: flex;
+  flex-wrap: wrap;
+
+  .club-card {
+    margin: 0 16px 16px 0;
+  }
+}
+
+.browse-clubs__header__right-side{
+  margin-left: auto;
+  display: flex;
+}
+
+//.browse-clubs__header__right-side__addClub{
+//  height: 32px;
+//}
+
+.browse-clubs__header__left{
+  display: flex;
+  flex-direction: row;
+  min-width: 224px;
+  max-width: 396px;
+  margin-right: 50px;
+}
+
+.browse-clubs__header{
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.browse-clubs__header__left__checkbox{
+  margin-top: 7px;
+
+}

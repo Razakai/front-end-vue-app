@@ -22,7 +22,9 @@ export default createStore({
             status: 'student', // student, staff, neither
             membership: 'oneYear', // one year, open ended
             username: 'test',
-            password: 'test'
+            password: 'test',
+            clubs: [],
+            appointments: []
           },
           {
             firstName: 'Tash',
@@ -37,7 +39,9 @@ export default createStore({
             status: 'student', // student, staff, neither
             membership: 'oneYear', // one year, open ended
             username: 'test2',
-            password: 'test2'
+            password: 'test2',
+            clubs: [],
+            appointments: []
           },
           {
             firstName: 'Tash2',
@@ -52,9 +56,122 @@ export default createStore({
             status: 'student', // student, staff, neither
             membership: 'oneYear', // one year, open ended
             username: 'test22',
-            password: 'test22'
+            password: 'test22',
+            clubs: [],
+            appointments: []
           }
-        ]
+        ],
+      clubs:
+      [
+        {
+          name: 'club1',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club2',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club3',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club4',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club5',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club6',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club7',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club8',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club9',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club10',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club11',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        },
+        {
+          name: 'club12',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        }
+      ]
     },
     isLoggedIn: ''
   },
@@ -72,7 +189,8 @@ export default createStore({
       store.types.users.push(newUser)
     },
     [types.UPDATE_USER] (store, { details, index }) {
-      store.types.users[index] = details
+      console.log('mutation', details, index)
+      Object.assign(store.types.users[index], details)
     }
   },
   actions: {
@@ -96,6 +214,25 @@ export default createStore({
           commit(types.SET_ISLOGGEDIN, details.username)
         }
       }
+    },
+    addUserClub ({ commit, getters }, name) {
+      const user = getters.getLoggedInUser
+      const userClubs = user.clubs
+
+      const userIndex = getters.getUsers({ includeCurrentUser: true }).map(
+        e => e.username
+      ).indexOf(user.username)
+
+      if (!userClubs.includes(name)) {
+        userClubs.push(name)
+        commit(types.UPDATE_USER, {
+          details: {
+            clubs: userClubs
+          },
+          index: userIndex
+        })
+      }
+      console.log(getters.getLoggedInUser.clubs)
     },
     login ({ commit, getters }, { username, password }) {
       const users = getters.getUsers({ includeCurrentUser: true }).some(
@@ -142,6 +279,9 @@ export default createStore({
       return state.types.users.filter(
         user => user.username === username
       )[0]
+    },
+    getClubs: (state) => {
+      return state.types.clubs
     }
   }
 })

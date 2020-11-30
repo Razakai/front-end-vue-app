@@ -14,17 +14,23 @@
 }
 
 .nav {
-    padding: 15px 0 35px 0;
     display: flex;
+    height: 10%;
 
+}
+
+.nav__right,
+.nav-container{
+    margin-top: 25px;
 }
 
 .nav-container {
     display: flex;
     flex: 1;
+
 }
 
-.nav__left{
+.nav-container__left{
     display: flex;
     flex: 1;
 }
@@ -32,7 +38,8 @@
     margin: 0px 15px 0px 5px;
 }
 
-.nav__right {
+.nav__right,
+.nav-container__right{
     display: flex;
     align-items: center;
     justify-content: flex-end;

@@ -2,12 +2,13 @@
   <div class="nav">
     <img src="../assets/citLogo.jpg" height="100" width="200">
     <span v-if="isLoggedIn" class="nav-container">
-      <span class="nav__left">
+      <span class="nav-container__left">
         <router-link to="/" class="router-link">Home</router-link>
         <router-link to="/about" class="router-link">About</router-link>
         <router-link to="/welcome" class="router-link">Welcome Page</router-link>
+        <router-link to="/clubs" class="router-link">Clubs</router-link>
       </span>
-      <span class="nav__right">
+      <span class="nav-container__right">
         <router-link to="/profile" class="router-link">Profile</router-link>
         <g-button @click="logout"> Logout </g-button>
       </span>

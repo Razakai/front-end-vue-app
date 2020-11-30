@@ -3,6 +3,7 @@ import Home from '../pages/home/home.vue'
 import welcome from '../pages/welcomePage/welcome.vue'
 import about from '../pages/About.vue'
 import profile from '../pages/profile/profile.vue'
+import clubs from '../pages/clubs/clubs.vue'
 import createStore from '../store/index.js'
 
 const routes = [
@@ -32,6 +33,14 @@ const routes = [
       requiresAuth: true
     }
 
+  },
+  {
+    path: '/clubs',
+    name: 'Clubs',
+    component: clubs,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/:catchAll(.*)',
