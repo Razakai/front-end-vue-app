@@ -1,5 +1,10 @@
+import GButton from '../sections/GButton/GButton.vue'
 export default {
   name: 'bookingsTable',
+
+  components: {
+    GButton
+  },
 
   props: {
     bookings: {
@@ -24,6 +29,9 @@ export default {
   },
 
   methods: {
-
+    async cancelBooking (name) {
+      console.log('cancel:', name)
+      await this.$store.dispatch('cancelBooking', { name, isAppointment: this.isAppointments })
+    }
   }
 }

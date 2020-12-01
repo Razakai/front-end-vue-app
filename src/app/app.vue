@@ -25,7 +25,7 @@
         v-model="password"
         :placeholder="'Password'">
      </text-input>
-      <g-button @click="login"> Login </g-button>
+      <g-button :disabled="loginAttempts === 3" @click="login"> Login </g-button>
   </span>
   </div>
   <router-view/>

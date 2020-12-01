@@ -13,7 +13,8 @@ export default {
     return {
       username: '',
       password: '',
-      shouldFocus: false
+      shouldFocus: false,
+      loginAttempts: 0
     }
   },
 
@@ -23,12 +24,15 @@ export default {
     }
   },
   methods: {
-    login () {
-      this.$store.dispatch('login', { username: this.username, password: this.password })
+    async login () {
+      await this.$store.dispatch('login', { username: this.username, password: this.password })
+      if (!this.isLoggedIn) {
+        this.loginAttempts += 1
+      }
     },
     async logout () {
-      this.$store.dispatch('logout', false)
       await this.$router.push('/')
+      this.$store.dispatch('logout', false)
     }
   }
 }

@@ -1,5 +1,6 @@
 <template>
   <button
+    :disabled="disabled"
     class="w-button"
     @click="onClick">
     <slot/>

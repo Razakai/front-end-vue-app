@@ -1,5 +1,6 @@
 <template>
   <main class="browse-clubs">
+    <club-model v-if="showModel"/>
     <section class="browse-clubs__header">
       <div class="browse-clubs__header__left">
         <select name="filterBy" v-model="multiselect">
@@ -16,7 +17,8 @@
       <div class="browse-clubs__header__right-side">
         <div class="browse-clubs__header__right-side__addClub">
           <g-button
-            v-if="isTrainer">
+            v-if="!isTrainer"
+            @click="setShowModel(!showModel)">
             Add Club
           </g-button>
         </div>

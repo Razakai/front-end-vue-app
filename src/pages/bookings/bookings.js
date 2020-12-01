@@ -21,10 +21,8 @@ export default {
     getItems () {
       return this.$store.getters.getBookings({ getAppointments: this.showAppointments })
     }
-
   },
 
   methods: {
-
   }
 }

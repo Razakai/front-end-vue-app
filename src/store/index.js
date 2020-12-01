@@ -247,6 +247,39 @@ export default createStore({
       console.log(getters.getLoggedInUser.clubs)
     },
 
+    cancelBooking ({ commit, getters }, { name, isAppointment }) {
+      const user = getters.getLoggedInUser
+      const userIndex = getters.getUsers({ includeCurrentUser: true }).map(
+        e => e.username
+      ).indexOf(user.username)
+
+      if (isAppointment) {
+        const currentUserAppointments = getters.getLoggedInUser.appointments
+        const index = currentUserAppointments.indexOf(name)
+        if (index > -1) {
+          currentUserAppointments.splice(currentUserAppointments.indexOf(name), 1)
+          commit(types.UPDATE_USER, {
+            details: {
+              appointments: currentUserAppointments
+            },
+            index: userIndex
+          })
+        }
+      }
+
+      const currentUserClubs = getters.getLoggedInUser.clubs
+      const index = currentUserClubs.indexOf(name)
+      if (index > -1) {
+        currentUserClubs.splice(currentUserClubs.indexOf(name), 1)
+        commit(types.UPDATE_USER, {
+          details: {
+            clubs: currentUserClubs
+          },
+          index: userIndex
+        })
+      }
+    },
+
     addUserAppointment ({ commit, getters }, name) {
       const user = getters.getLoggedInUser
       const userAppointments = user.appointments

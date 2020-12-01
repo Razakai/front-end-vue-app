@@ -1,20 +1,23 @@
 import TextInput from '../../components/sections/TextInput/TextInput.vue'
 import GButton from '../../components/sections/GButton/GButton.vue'
 import clubCard from '../../components/clubCard/clubCard.vue'
+import clubModel from '../../components/clubModel/clubModel.vue'
 export default {
   name: 'clubs',
 
   components: {
     TextInput,
     GButton,
-    clubCard
+    clubCard,
+    clubModel
   },
 
   data: () => {
     return {
       searchTerm: '',
       multiselect: 'name',
-      sortByCalories: false
+      sortByCalories: false,
+      showModel: false
     }
   },
 
@@ -38,6 +41,10 @@ export default {
     async addUserAppointment (name) {
       console.log('appointment', name)
       await this.$store.dispatch('addUserAppointment', name)
+    },
+
+    setShowModel (value) {
+      this.showModel = value
     }
 
   },
