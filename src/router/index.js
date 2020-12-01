@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/home/home.vue'
-import welcome from '../pages/welcomePage/welcome.vue'
-import about from '../pages/About.vue'
 import profile from '../pages/profile/profile.vue'
 import clubs from '../pages/clubs/clubs.vue'
 import bookings from '../pages/bookings/bookings.vue'
@@ -12,19 +10,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/welcome',
-    name: 'Welcome',
-    component: welcome,
-    meta: {
-      requiresAuth: true
-    }
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: about
   },
   {
     path: '/profile',

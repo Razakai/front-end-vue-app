@@ -12,7 +12,8 @@
       </div>
       <div class="club-card__description">
         Facility: <span class="club-card__bold-text">{{ club.facility }}</span><br>
-        Date: <span class="club-card__bold-text">{{ club.date }}</span>
+        Date: <span class="club-card__bold-text">{{ club.date }}</span><br>
+        Time: <span class="club-card__bold-text">{{ club.time }}</span>
       </div>
       <div class="club-card__additional-information">
         <div class="club-card__additional-information__row">

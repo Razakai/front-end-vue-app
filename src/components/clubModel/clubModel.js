@@ -9,17 +9,44 @@ export default {
     GButton
   },
 
-  date: () => {
+  data: () => {
     return {
-
+      maxsize: '',
+      facility: '',
+      trainer: '',
+      duration: '',
+      calories: '',
+      photoUrl: '',
+      date: '',
+      time: '',
+      name: ''
     }
   },
 
   computed: {
+    modelName () {
+      return 'Create Club'
+    },
+
+    getFacilities () {
+      return this.$store.getters.getFacilities
+    }
 
   },
 
+  watch: {
+    time () {
+      console.log(this.time)
+    },
+    date () {
+      console.log(this.date)
+    }
+  },
+
   methods: {
+    closeModel () {
+      this.$emit('close-model')
+    }
 
   }
 }

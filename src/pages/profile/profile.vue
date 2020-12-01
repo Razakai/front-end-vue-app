@@ -41,7 +41,7 @@
       </article>
       <article class="profileContainer-row">
         <TextInput class="profileInput" v-model="username" placeholder="Username"/>
-        <TextInput class="profileInput" v-model="password" placeholder="Password"/>
+        <TextInput class="profileInput" v-model="password" :input-type="'password'" placeholder="Password"/>
       </article>
       <article class="profileContainer-row-radio">
         <input type="radio" id="male" value="male" v-model="gender">

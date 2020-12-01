@@ -9,6 +9,11 @@ export default {
     modelValue: {
       type: String,
       default: ''
+    },
+    inputType: {
+      type: String,
+      required: false,
+      default: 'text'
     }
   },
 

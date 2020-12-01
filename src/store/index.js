@@ -4,9 +4,13 @@ import * as types from './mutation-types'
 export default createStore({
   state: {
     types: {
-      events: [
-        {}
-      ],
+      facilities:
+        [
+          'CIT Sports Ground',
+          'CIT Gym',
+          'Bishopstown GAA Club',
+          'CIT Athletic Track'
+        ],
       users:
         [
           {
@@ -71,7 +75,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '18-12-2020'
+          date: '18-12-2020',
+          time: '11:55'
         },
         {
           name: 'club2',
@@ -81,7 +86,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '19-12-2020'
+          date: '19-12-2020',
+          time: '11:55'
         },
         {
           name: 'club3',
@@ -91,7 +97,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '20-12-2020'
+          date: '20-12-2020',
+          time: '11:55'
         },
         {
           name: 'club4',
@@ -101,7 +108,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '16-12-2020'
+          date: '16-12-2020',
+          time: '11:55'
         },
         {
           name: 'club5',
@@ -111,7 +119,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '11-12-2020'
+          date: '11-12-2020',
+          time: '11:55'
         },
         {
           name: 'club6',
@@ -121,7 +130,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '25-12-2020'
+          date: '25-12-2020',
+          time: '11:55'
         },
         {
           name: 'club7',
@@ -131,7 +141,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '29-12-2020'
+          date: '29-12-2020',
+          time: '11:55'
         },
         {
           name: 'club8',
@@ -141,7 +152,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '15-12-2020'
+          date: '15-12-2020',
+          time: '11:55'
         },
         {
           name: 'club9',
@@ -151,7 +163,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '18-12-2020'
+          date: '18-12-2020',
+          time: '11:55'
         },
         {
           name: 'club10',
@@ -161,7 +174,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '8-12-2020'
+          date: '8-12-2020',
+          time: '11:55'
         },
         {
           name: 'club11',
@@ -171,7 +185,8 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '5-12-2020'
+          date: '5-12-2020',
+          time: '11:55'
         },
         {
           name: 'club12',
@@ -181,7 +196,140 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '26-12-2020'
+          date: '26-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club13',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '18-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club14',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '19-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club15',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '20-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club16',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '16-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club17',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '11-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club18',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '25-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club19',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '29-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club20',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '15-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club21',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '18-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club22',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '8-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club23',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '5-12-2020',
+          time: '11:55'
+        },
+        {
+          name: 'club24',
+          maxSize: '20',
+          facility: 'CIT Sports ground',
+          trainer: 'John',
+          duration: '60',
+          calories: '500',
+          photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          date: '26-12-2020',
+          time: '11:55'
         }
       ]
     },
@@ -348,6 +496,9 @@ export default createStore({
     },
     getClubs: (state) => {
       return state.types.clubs
+    },
+    getFacilities: (state) => {
+      return state.types.facilities
     },
     getBookings: (state, getters) => ({ getAppointments }) => {
       if (getAppointments) {

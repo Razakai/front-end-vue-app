@@ -18,7 +18,7 @@
     </div>
     <div class="registerContainer-row">
       <TextInput class="registerInput" v-model="username" placeholder="Username"/>
-      <TextInput class="registerInput" v-model="password" placeholder="Password"/>
+      <TextInput class="registerInput" v-model="password" :input-type="'password'" placeholder="Password"/>
     </div>
     <div class="registerContainer-row-radio">
       <input type="radio" id="male" value="male" v-model="gender">

@@ -9,6 +9,7 @@
   padding: 24px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .p-bookings__header__left{
@@ -21,4 +22,17 @@
 .p-bookings__header__right{
   margin-left: auto;
   display: flex;
+
+  @media (max-width: 900px) {
+    margin: 0;
+
+  }
+}
+
+.p-bookings__table-wrapper{
+  overflow: scroll;
+  margin: 0px 24px;
+  flex: 1;
+  display: flex;
+  min-height: 0;
 }

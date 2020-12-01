@@ -1,6 +1,6 @@
 <template>
   <main class="browse-clubs">
-    <club-model v-if="showModel"/>
+    <club-model @close-model="setShowModel(false)" v-if="showModel"/>
     <section class="browse-clubs__header">
       <div class="browse-clubs__header__left">
         <select name="filterBy" v-model="multiselect">

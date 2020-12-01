@@ -4,8 +4,6 @@
     <span v-if="isLoggedIn" class="nav-container">
       <span class="nav-container__left">
         <router-link to="/" class="router-link">Home</router-link>
-        <router-link to="/about" class="router-link">About</router-link>
-        <router-link to="/welcome" class="router-link">Welcome Page</router-link>
         <router-link to="/clubs" class="router-link">Clubs</router-link>
         <router-link to="/bookings" class="router-link">Bookings</router-link>
       </span>
@@ -23,6 +21,7 @@
       <text-input
         class="nav__right-input"
         v-model="password"
+        :input-type="'password'"
         :placeholder="'Password'">
      </text-input>
       <g-button :disabled="loginAttempts === 3" @click="login"> Login </g-button>

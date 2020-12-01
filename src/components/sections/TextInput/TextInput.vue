@@ -3,7 +3,7 @@
    <input
       class="w-text-input__text-input"
       ref="input"
-      type="text"
+      :type="inputType"
       :value="modelValue"
       :placeholder="placeholder"
       @input="updateValue"/>

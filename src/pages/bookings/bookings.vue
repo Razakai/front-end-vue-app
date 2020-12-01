@@ -14,7 +14,7 @@
         </div>
       </div>
     </section>
-    <section class="p-bookings__body">
+    <section class="p-bookings__table-wrapper">
       <bookings-table
         :bookings="getItems"
         :is-appointments="showAppointments"/>
