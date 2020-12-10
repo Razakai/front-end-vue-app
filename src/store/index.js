@@ -75,7 +75,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '18-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -86,7 +86,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '19-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -97,7 +97,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '20-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -108,7 +108,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '16-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -119,7 +119,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '11-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -130,7 +130,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '25-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -141,7 +141,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '29-12-2020',
+          date: '2020-10-05',
           time: '11:55'
         },
         {
@@ -152,7 +152,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '15-12-2020',
+          date: '2015-12-05',
           time: '11:55'
         },
         {
@@ -163,7 +163,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '18-12-2020',
+          date: '2020-05-05',
           time: '11:55'
         },
         {
@@ -174,7 +174,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '8-12-2020',
+          date: '2020-12-15',
           time: '11:55'
         },
         {
@@ -185,7 +185,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '5-12-2020',
+          date: '2020-12-17',
           time: '11:55'
         },
         {
@@ -196,7 +196,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '26-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -207,7 +207,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '18-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -218,7 +218,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '19-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -229,7 +229,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '20-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -238,9 +238,9 @@ export default createStore({
           facility: 'CIT Sports ground',
           trainer: 'John',
           duration: '60',
-          calories: '500',
+          calories: '9000',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '16-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -251,7 +251,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '11-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -262,7 +262,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '25-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -273,7 +273,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '29-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -284,7 +284,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '15-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -295,7 +295,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '18-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -306,7 +306,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '8-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -317,7 +317,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '5-12-2020',
+          date: '2020-12-05',
           time: '11:55'
         },
         {
@@ -328,7 +328,7 @@ export default createStore({
           duration: '60',
           calories: '500',
           photo: 'https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-          date: '26-12-2020',
+          date: '2020-2-05',
           time: '11:55'
         }
       ]
@@ -349,7 +349,6 @@ export default createStore({
       store.types.users.push(newUser)
     },
     [types.UPDATE_USER] (store, { details, index }) {
-      console.log('mutation', details, index)
       Object.assign(store.types.users[index], details)
     }
   },
@@ -383,8 +382,9 @@ export default createStore({
         e => e.username
       ).indexOf(user.username)
 
-      if (!userClubs.includes(name)) {
-        userClubs.push(name)
+      if (!userClubs.some(e => e.name === name)) {
+        userClubs.push({ name: name, bookingDate: new Date() })
+
         commit(types.UPDATE_USER, {
           details: {
             clubs: userClubs
@@ -392,7 +392,6 @@ export default createStore({
           index: userIndex
         })
       }
-      console.log(getters.getLoggedInUser.clubs)
     },
 
     cancelBooking ({ commit, getters }, { name, isAppointment }) {
@@ -403,9 +402,11 @@ export default createStore({
 
       if (isAppointment) {
         const currentUserAppointments = getters.getLoggedInUser.appointments
-        const index = currentUserAppointments.indexOf(name)
+        const index = currentUserAppointments.indexOf(
+          currentUserAppointments.find(e => e.name === name)
+        )
         if (index > -1) {
-          currentUserAppointments.splice(currentUserAppointments.indexOf(name), 1)
+          currentUserAppointments.splice(index, 1)
           commit(types.UPDATE_USER, {
             details: {
               appointments: currentUserAppointments
@@ -416,9 +417,11 @@ export default createStore({
       }
 
       const currentUserClubs = getters.getLoggedInUser.clubs
-      const index = currentUserClubs.indexOf(name)
+      const index = currentUserClubs.indexOf(
+        currentUserClubs.find(e => e.name === name)
+      )
       if (index > -1) {
-        currentUserClubs.splice(currentUserClubs.indexOf(name), 1)
+        currentUserClubs.splice(index, 1)
         commit(types.UPDATE_USER, {
           details: {
             clubs: currentUserClubs
@@ -436,8 +439,8 @@ export default createStore({
         e => e.username
       ).indexOf(user.username)
 
-      if (!userAppointments.includes(name)) {
-        userAppointments.push(name)
+      if (!userAppointments.some(e => e.name === name)) {
+        userAppointments.push({ name: name, bookingDate: new Date() })
         commit(types.UPDATE_USER, {
           details: {
             appointments: userAppointments
@@ -445,7 +448,6 @@ export default createStore({
           index: userIndex
         })
       }
-      console.log(getters.getLoggedInUser.appointments)
     },
 
     login ({ commit, getters }, { username, password }) {
@@ -454,7 +456,6 @@ export default createStore({
       )
       if (users) {
         commit(types.SET_ISLOGGEDIN, username)
-        console.log('was getters set, isLoggedIn?', getters.getIsLoggedIn)
       }
     },
     createUser ({ commit, getters }, { details }) {
@@ -465,7 +466,6 @@ export default createStore({
         commit(types.CREATE_USER, details)
         commit(types.SET_ISLOGGEDIN, details.username)
       }
-      console.log(getters.getIsLoggedIn)
     }
   },
   getters: {
@@ -503,10 +503,27 @@ export default createStore({
     getBookings: (state, getters) => ({ getAppointments }) => {
       if (getAppointments) {
         const userAppointments = getters.getLoggedInUser.appointments
-        return getters.getClubs.filter(club => userAppointments.includes(club.name))
+        return getters.getClubs
+          .filter(club => userAppointments.some(item => item.name === club.name))
+          .map(club => {
+            const date = userAppointments.find(element => element.name === club.name)
+
+            return {
+              ...club,
+              bookingDate: date.bookingDate.toISOString().split('T')[0]
+            }
+          })
       }
       const userBookings = getters.getLoggedInUser.clubs
-      return getters.getClubs.filter(club => userBookings.includes(club.name))
+      return getters.getClubs
+        .filter(club => userBookings.some(item => item.name === club.name))
+        .map(club => {
+          const date = userBookings.find(element => element.name === club.name)
+          return {
+            ...club,
+            bookingDate: date.bookingDate.toISOString().split('T')[0]
+          }
+        })
     }
   }
 })

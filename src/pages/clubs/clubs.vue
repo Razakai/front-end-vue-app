@@ -29,7 +29,7 @@
         <div
           class="browse-clubs__content"
           v-if="getClubs.length > 0">
-          <article v-for="club in getClubs" :key="club.name">
+          <article v-for="club in allSortedAndFilteredClubs" :key="club.name">
             <club-card
               class="club-card"
               :club="club"

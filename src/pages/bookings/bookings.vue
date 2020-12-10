@@ -3,7 +3,8 @@
     <section class="p-bookings__header">
       <div class="p-bookings__header__left">
       <select name="filterBy" v-model="multiselect">
-        <option value="date">Date</option>
+        <option value="bookingDate">Booking date</option>
+        <option value="name">Club name</option>
       </select>
       <TextInput v-model="searchTerm" placeholder="search term"/>
       </div>
@@ -16,7 +17,7 @@
     </section>
     <section class="p-bookings__table-wrapper">
       <bookings-table
-        :bookings="getItems"
+        :bookings="getbookings"
         :is-appointments="showAppointments"/>
     </section>
   </main>
