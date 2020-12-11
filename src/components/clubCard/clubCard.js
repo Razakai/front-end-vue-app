@@ -22,6 +22,10 @@ export default {
       this.$emit('join-club')
     },
 
+    editClub () {
+      this.$emit('edit-club')
+    },
+
     createAppointment () {
       this.$emit('create-appointment')
     }

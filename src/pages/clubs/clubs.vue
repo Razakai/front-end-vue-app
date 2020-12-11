@@ -1,6 +1,6 @@
 <template>
   <main class="browse-clubs">
-    <club-model @close-model="setShowModel(false)" v-if="showModel"/>
+    <club-model @close-model="showClubModel(false)" :edit-club="this.clubName" v-if="showModel"/>
     <section class="browse-clubs__header">
       <div class="browse-clubs__header__left">
         <select name="filterBy" v-model="multiselect">
@@ -18,7 +18,7 @@
         <div class="browse-clubs__header__right-side__addClub">
           <g-button
             v-if="!isTrainer"
-            @click="setShowModel(!showModel)">
+            @click="showClubModel(!showModel)">
             Add Club
           </g-button>
         </div>
@@ -33,6 +33,7 @@
             <club-card
               class="club-card"
               :club="club"
+              @edit-club="editClub(club.name)"
               @join-club="addUserClub(club.name)"
               @create-appointment="addUserAppointment(club.name)"
             />

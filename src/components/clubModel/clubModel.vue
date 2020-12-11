@@ -45,7 +45,7 @@
                 <label>Club Photo</label>
               </div>
               <div>
-                <TextInput class="club-model__content__fields__input__override" v-model="photoUrl" :placeholder="'Club Photo'"></TextInput>
+                <TextInput class="club-model__content__fields__input__override" v-model="photo" :placeholder="'Club Photo'"></TextInput>
               </div>
             </div>
             <div>
@@ -53,7 +53,7 @@
                 <label>Date</label>
               </div>
               <div>
-                <TextInput class="club-model__content__fields__input__override" v-model="date" :input-type="'date'" :placeholder="'Date'"></TextInput>
+                <TextInput class="club-model__content__fields__input__override" v-model="date" :placeholder="'Date'"></TextInput>
               </div>
             </div>
             <div>
@@ -61,12 +61,13 @@
                 <label>Time</label>
               </div>
               <div>
-                <TextInput class="club-model__content__fields__input__override" v-model="time" :input-type="'time'" :placeholder="'Date'"></TextInput>
+                <TextInput class="club-model__content__fields__input__override" v-model="time" :input-type="'time'" :placeholder="'time'"></TextInput>
               </div>
             </div>
           </div>
           <div class="club-model__content__btn">
-            <g-button>Create</g-button>
+            <g-button v-if="this.editClub === ''" :disabled="!this.validateForm" @click="this.createClub">{{ modelName }}</g-button>
+            <g-button v-else :disabled="!this.validateForm" @click="this.updateClub">{{ modelName }}</g-button>
           </div>
         </div>
       </div>

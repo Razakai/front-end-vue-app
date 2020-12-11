@@ -19,7 +19,8 @@ export default {
       searchTerm: '',
       multiselect: 'name',
       sortByCalories: false,
-      showModel: false
+      showModel: false,
+      clubName: ''
     }
   },
 
@@ -35,7 +36,6 @@ export default {
     sortedClubs () {
       const clubs = this.$store.getters.getClubs
 
-      console.log(this.sortByCalories)
       if (this.sortByCalories) {
         return clubs.sort((a, b) => {
           if (a.calories < b.calories) return 1
@@ -43,14 +43,12 @@ export default {
           return 0
         })
       }
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+      const currentDay = new Date().getDay()
 
       return clubs.sort((a, b) => {
-        const dateA = new Date(a.date)
-        const dateB = new Date(b.date)
-
-        if (dateA < dateB) return -1
-        if (dateA > dateB) return 1
-        return 0
+        if (a.date === days[currentDay]) return -1
+        if (a.date !== days[currentDay]) return 1
       })
     },
 
@@ -60,7 +58,7 @@ export default {
       if (this.searchTerm !== '') {
         const fuse = new Fuse(clubs, {
           keys: [this.multiselect],
-          threshold: this.multiselect === 'date' ? 0 : 0.2
+          threshold: 0.2
         })
 
         clubs = fuse.search(this.searchTerm)
@@ -87,12 +85,14 @@ export default {
       await this.$store.dispatch('addUserAppointment', name)
     },
 
-    setShowModel (value) {
+    editClub (name) {
+      this.clubName = name
+      this.showClubModel(true)
+    },
+
+    showClubModel (value) {
+      if (value === false) { this.clubName = '' }
       this.showModel = value
     }
-
-  },
-  created () {
-    console.log('created')
   }
 }

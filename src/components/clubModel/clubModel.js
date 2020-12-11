@@ -9,6 +9,14 @@ export default {
     GButton
   },
 
+  props: {
+    editClub: {
+      type: String,
+      required: false,
+      default: ''
+    }
+  },
+
   data: () => {
     return {
       maxsize: '',
@@ -16,7 +24,7 @@ export default {
       trainer: '',
       duration: '',
       calories: '',
-      photoUrl: '',
+      photo: '',
       date: '',
       time: '',
       name: ''
@@ -25,7 +33,23 @@ export default {
 
   computed: {
     modelName () {
+      if (this.editClub !== '') { return 'Update Club' }
       return 'Create Club'
+    },
+
+    validateForm () {
+      if (
+        this.maxsize !== '' &&
+        this.facility !== '' &&
+        this.trainer !== '' &&
+        this.duration !== '' &&
+        this.calories !== '' &&
+        this.photo !== '' &&
+        this.date !== '' &&
+        this.time !== '' &&
+        this.name !== ''
+      ) { return true }
+      return false
     },
 
     getFacilities () {
@@ -46,7 +70,63 @@ export default {
   methods: {
     closeModel () {
       this.$emit('close-model')
-    }
+    },
 
+    async updateClub () {
+      if (this.noClubClash()) {
+        await this.$store.dispatch('updateClub', {
+          details: {
+            maxSize: this.maxsize,
+            facility: this.facility,
+            trainer: this.trainer,
+            duration: this.duration,
+            calories: this.calories,
+            photo: this.photo,
+            date: this.date,
+            time: this.time,
+            name: this.name
+          },
+          clubName: this.editClub
+        })
+        this.closeModel()
+      }
+    },
+
+    async createClub () {
+      await this.$store.dispatch('createClub', {
+        details: {
+          maxSize: this.maxsize,
+          facility: this.facility,
+          trainer: this.trainer,
+          duration: this.duration,
+          calories: this.calories,
+          photo: this.photo,
+          date: this.date,
+          time: this.time,
+          name: this.name
+        }
+      })
+      this.closeModel()
+    },
+
+    noClubClash () {
+      return this.$store.getters.getClubs.filter(e => e.name === this.name && e.name !== this.editClub).length === 0
+    }
+  },
+
+  created () {
+    if (this.editClub !== '') {
+      const club = this.$store.getters.getClubByName(this.editClub)
+      console.log(club)
+      this.maxsize = club.maxSize
+      this.facility = club.facility
+      this.trainer = club.trainer
+      this.duration = club.duration
+      this.calories = club.calories
+      this.photo = club.photo
+      this.date = club.date
+      this.time = club.time
+      this.name = club.name
+    }
   }
 }
