@@ -4,6 +4,41 @@ import * as types from './mutation-types'
 export default createStore({
   state: {
     types: {
+      meals: {
+        breakfast:
+        [
+          {
+            name: 'beans',
+            calories: 750
+          },
+          {
+            name: 'cereal',
+            calories: 500
+          }
+        ],
+        lunch:
+        [
+          {
+            name: 'ham sandwich',
+            calories: 900
+          },
+          {
+            name: 'soup',
+            calories: 300
+          }
+        ],
+        dinner:
+        [
+          {
+            name: 'stew',
+            calories: 1100
+          },
+          {
+            name: 'pasta',
+            calories: 600
+          }
+        ]
+      },
       facilities:
         [
           'CIT Sports ground',
@@ -19,7 +54,7 @@ export default createStore({
             gender: 'male',
             age: '22',
             weight: '180',
-            height: '6.1',
+            height: '185',
             address: 'ballinadee',
             email: 'addamholland12398@gmail.com',
             phoneNumber: '08584012345',
@@ -28,15 +63,16 @@ export default createStore({
             username: 'test',
             password: 'test',
             clubs: [],
-            appointments: []
+            appointments: [],
+            passwordLastChangedDate: new Date('Thu Nov 15 2020 09:52:12 GMT+0000 (Greenwich Mean Time)')
           },
           {
             firstName: 'Tash',
             lastName: 'Hayes',
             gender: 'female',
             age: '22',
-            weight: '180',
-            height: '5.8',
+            weight: '140',
+            height: '173',
             address: 'kinsale',
             email: 'qwerty@gmail.com',
             phoneNumber: '08584012345',
@@ -45,7 +81,8 @@ export default createStore({
             username: 'test2',
             password: 'test2',
             clubs: [],
-            appointments: []
+            appointments: [],
+            passwordLastChangedDate: new Date('Thu Nov 10 2020 09:52:12 GMT+0000 (Greenwich Mean Time)')
           },
           {
             firstName: 'Tash2',
@@ -333,14 +370,19 @@ export default createStore({
         }
       ]
     },
-    isLoggedIn: ''
+    isLoggedIn: '',
+    changePassword: false
   },
   mutations: {
     [types.RESET_STATE] (store) {
       store.isLoggedIn = ''
+      store.changePassword = false
     },
     [types.SET_ISLOGGEDIN] (store, status) {
       store.isLoggedIn = status
+    },
+    [types.SET_CHANGE_PASSWORD] (store, status) {
+      store.changePassword = status
     },
     [types.CREATE_EVENT] (store, event) {
       store.types.events.push(event)
@@ -364,6 +406,7 @@ export default createStore({
     },
     logout ({ commit }, username) {
       commit(types.SET_ISLOGGEDIN, username)
+      commit(types.SET_CHANGE_PASSWORD, false)
     },
     editEvents ({ commit }, { event }) {
       commit(types.CREATE_EVENT, event)
@@ -375,10 +418,14 @@ export default createStore({
 
       if (userIndex >= 0) {
         commit(types.UPDATE_USER, { details, index: userIndex })
+        if ('passwordLastChangedDate' in details) {
+          commit(types.SET_CHANGE_PASSWORD, false)
+        }
         if (usernameUpdated) {
           commit(types.SET_ISLOGGEDIN, details.username)
         }
       }
+      console.log(getters.getChangePassword)
     },
     updateClub ({ commit, getters }, { details, clubName }) {
       console.log('store', details)
@@ -472,6 +519,18 @@ export default createStore({
       )
       if (users) {
         commit(types.SET_ISLOGGEDIN, username)
+        const currentUser = getters.getLoggedInUser
+
+        const _MS_PER_DAY = 1000 * 60 * 60 * 24
+        const currentDate = new Date()
+        const passwordLastChangedDate = currentUser.passwordLastChangedDate
+
+        // Discard the time and time-zone information.
+        const utc1 = Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate())
+        const utc2 = Date.UTC(passwordLastChangedDate.getFullYear(), passwordLastChangedDate.getMonth(), passwordLastChangedDate.getDate())
+
+        const dateDiff = Math.floor((utc1 - utc2) / _MS_PER_DAY)
+        if (dateDiff > 20 && dateDiff < 30) { alert(`Password needs to be changed in ${30 - dateDiff} days`) } else if (dateDiff >= 30) { commit(types.SET_CHANGE_PASSWORD, true) }
       }
     },
     createUser ({ commit, getters }, { details }) {
@@ -483,6 +542,9 @@ export default createStore({
         commit(types.SET_ISLOGGEDIN, details.username)
       }
     },
+    setChangePassword ({ commit }, status) {
+      commit(types.SET_CHANGE_PASSWORD, status)
+    },
     createClub ({ commit, getters }, { details }) {
       const club = getters.getClubs.some(
         club => club.name === details.name
@@ -493,6 +555,9 @@ export default createStore({
     }
   },
   getters: {
+    getChangePassword: (state) => {
+      return state.changePassword
+    },
     getEvents: (state) => {
       return state.types.events
     },
@@ -520,6 +585,15 @@ export default createStore({
     },
     getClubs: (state) => {
       return state.types.clubs
+    },
+    getBreakfast: (state) => {
+      return state.types.meals.breakfast
+    },
+    getLunch: (state) => {
+      return state.types.meals.lunch
+    },
+    getDinner: (state) => {
+      return state.types.meals.dinner
     },
     getClubByName: (state, getters) => (name) => {
       return getters.getClubs.find(club => club.name === name)

@@ -1,0 +1,29 @@
+.p-training-plan{
+  width: 100%;
+  height: 90%;
+}
+
+.training-plan-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0 35px 0;
+}
+
+.training-plan__bmr,
+.training-plan__calories,
+.training-plan__meal-plan,
+.training-plan__calorie-intake{
+  margin-top: 20px;
+}
+
+.training-plan__meal-plan{
+  display: flex;
+  flex-direction: row;
+}
+
+.training-plan__meal-plan__item-container{
+  display: flex;
+  flex-direction: column;
+}

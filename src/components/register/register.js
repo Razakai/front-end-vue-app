@@ -79,7 +79,8 @@ export default {
             membership: this.membership,
             username: this.username,
             status: this.status,
-            password: this.password
+            password: this.password,
+            passwordLastChangedDate: new Date()
           }
         })
         await this.$router.push('/about')

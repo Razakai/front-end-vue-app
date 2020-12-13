@@ -97,10 +97,7 @@ export default {
         if ('username' in diff) {
           this.usernameUpdated = true
         }
-        console.log(this.$store.getters.getUsers({ includeCurrentUser: false }))
-        console.log(this.$store.getters.getUsers({ includeCurrentUser: false }).some(
-          user => user.username === this.username
-        ))
+
         return !this.$store.getters.getUsers({ includeCurrentUser: false }).some(
           user => user.username === this.username
         )
@@ -110,8 +107,11 @@ export default {
 
     async updateProfile () {
       if (this.isFormFilled() && this.isUserDataClashing()) {
+        const details = this.createNewProfileObject()
+        if (this.passwordUpdated) { Object.assign(details, { passwordLastChangedDate: new Date() }) }
+
         await this.$store.dispatch('updateUser', {
-          details: this.createNewProfileObject(),
+          details,
           usernameUpdated: this.usernameUpdated
         })
         this.profileUpdated = true

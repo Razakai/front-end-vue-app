@@ -24,6 +24,13 @@
     margin-top: 25px;
 }
 
+.nav__right__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-end;
+}
+
 .nav-container {
     display: flex;
     flex: 1;
@@ -39,7 +46,7 @@
 }
 
 .nav__right,
-.nav-container__right{
+.nav-container__right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
