@@ -33,7 +33,7 @@ export default {
       const currentDay = new Date().getDay()
 
       const clubs = this.userClubs
-        .filter(club => club.date !== days[currentDay] && club.time.split(':')[0] <= new Date().getHours())
+        .filter(club => club.date === days[currentDay] && club.time.split(':')[0] <= new Date().getHours())
         .map(club => club.calories)
 
       return clubs.reduce((a, b) => parseInt(a) + parseInt(b), 0)

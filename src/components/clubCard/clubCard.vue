@@ -22,7 +22,7 @@
             Max Size: <span class="club-card__bold-text">{{ club.maxSize }}</span>
           </div>
           <div class="club-card__additional-information__item">
-           Trainer: <span class="club-card__bold-text">{{ club.trainer }}</span>
+           Trainer: <span class="club-card__bold-text">{{ getTrainer }}</span>
           </div>
         </div>
         <div class="club-card__additional-information__row">

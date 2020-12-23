@@ -14,7 +14,10 @@ export default {
   },
 
   computed: {
-
+    getTrainer () {
+      const trainer = this.$store.getters.getUserByUsername(this.club.trainer)
+      return `${trainer.firstName} ${trainer.lastName}`
+    }
   },
 
   methods: {

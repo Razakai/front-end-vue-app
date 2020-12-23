@@ -106,6 +106,7 @@ export default {
     },
 
     async updateProfile () {
+      this.resetUpdatedStatus()
       if (this.isFormFilled() && this.isUserDataClashing()) {
         const details = this.createNewProfileObject()
         if (this.passwordUpdated) { Object.assign(details, { passwordLastChangedDate: new Date() }) }
@@ -116,6 +117,12 @@ export default {
         })
         this.profileUpdated = true
       }
+    },
+
+    resetUpdatedStatus () {
+      this.passwordUpdated = false
+      this.usernameUpdated = false
+      this.profileUpdated = false
     }
   },
 
