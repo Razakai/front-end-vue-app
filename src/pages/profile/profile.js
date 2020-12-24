@@ -78,7 +78,6 @@ export default {
     },
 
     isUserDataClashing () {
-      console.log('started isUserClashing')
       const newProfile = this.createNewProfileObject()
       const currentProfile = this.getUserDetails()
 

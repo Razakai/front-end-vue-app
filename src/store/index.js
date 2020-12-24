@@ -448,7 +448,7 @@ export default createStore({
     editEvents ({ commit }, { event }) {
       commit(types.CREATE_EVENT, event)
     },
-    updateUser ({ commit, getters }, { details, usernameUpdated }) {
+    updateUser ({ commit, getters, dispatch }, { details, usernameUpdated }) {
       const userIndex = getters.getUsers({ includeCurrentUser: true }).map(
         e => e.username
       ).indexOf(getters.getLoggedInUserUsername)
@@ -459,6 +459,13 @@ export default createStore({
           commit(types.SET_CHANGE_PASSWORD, false)
         }
         if (usernameUpdated) {
+          const clubs = getters.getClubs.filter(club => club.trainer === getters.getLoggedInUserUsername)
+          if (clubs.length > 0) {
+            clubs.forEach(club => {
+              club.trainer = details.username
+              dispatch('updateClub', { details: club, clubName: club.name })
+            })
+          }
           commit(types.SET_ISLOGGEDIN, details.username)
         }
       }

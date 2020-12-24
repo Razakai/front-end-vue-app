@@ -9,12 +9,6 @@ export default {
     }
   },
 
-  watch: {
-    breakfastCalories () {
-      console.log(this.breakfastCalories)
-    }
-  },
-
   computed: {
     loggedInUser () {
       return this.$store.getters.getLoggedInUser

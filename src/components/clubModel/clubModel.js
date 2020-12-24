@@ -62,15 +62,6 @@ export default {
 
   },
 
-  watch: {
-    time () {
-      console.log(this.time)
-    },
-    date () {
-      console.log(this.date)
-    }
-  },
-
   methods: {
     closeModel () {
       this.$emit('close-model')
@@ -121,7 +112,6 @@ export default {
   created () {
     if (this.editClub !== '') {
       const club = this.$store.getters.getClubByName(this.editClub)
-      console.log(club)
       this.maxsize = club.maxSize
       this.facility = club.facility
       this.trainer = club.trainer

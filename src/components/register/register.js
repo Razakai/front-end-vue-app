@@ -27,18 +27,6 @@ export default {
     }
   },
 
-  watch: {
-    firstName () {
-      console.log(this.firstName.length)
-    },
-    status () {
-      console.log(this.status)
-    },
-    membership () {
-      console.log(this.membership)
-    }
-  },
-
   computed: {
 
   },

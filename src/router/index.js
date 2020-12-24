@@ -65,7 +65,6 @@ router.beforeEach((to, from, next) => {
       next({ path: '/' })
     } else {
       if (createStore.getters.getChangePassword && to.matched.some(record => record.meta.requiresUpToDatePassword)) {
-        console.log('in router, needs p change', createStore.getters.getChangePassword)
         next({ path: '/profile' })
         alert('Your password is older than 30 days, you need to change it now')
       }

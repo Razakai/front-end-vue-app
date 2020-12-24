@@ -30,7 +30,6 @@ export default {
 
   methods: {
     async cancelBooking (name) {
-      console.log('cancel:', name)
       await this.$store.dispatch('cancelBooking', { name, isAppointment: this.isAppointments })
     }
   }

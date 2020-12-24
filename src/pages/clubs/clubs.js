@@ -32,7 +32,6 @@ export default {
     isTrainer () {
       const availableTrainers = this.$store.getters.getAvailableTrainers({ includeCurrentUser: false })
         .map(e => e.username)
-      console.log(availableTrainers)
 
       return availableTrainers.includes(this.$store.getters.getLoggedInUserUsername)
     },
