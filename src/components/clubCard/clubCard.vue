@@ -5,7 +5,7 @@
         class="club-card__club-icon"
         :src="club.photo"
         />
-      <g-button @click="editClub">Edit Club</g-button>
+      <g-button v-if="isUserClubTrainer" @click="editClub">Edit Club</g-button>
     </div>
     <div class="club-card__body">
       <div class="club-card__name">

@@ -17,7 +17,7 @@
       <div class="browse-clubs__header__right-side">
         <div class="browse-clubs__header__right-side__addClub">
           <g-button
-            v-if="!isTrainer"
+            v-if="isTrainer"
             @click="showClubModel(!showModel)">
             Add Club
           </g-button>

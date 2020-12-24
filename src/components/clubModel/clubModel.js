@@ -37,6 +37,10 @@ export default {
       return 'Create Club'
     },
 
+    getAvailableTrainers () {
+      return this.$store.getters.getAvailableTrainers({ includeCurrentUser: true })
+    },
+
     validateForm () {
       if (
         this.maxsize !== '' &&

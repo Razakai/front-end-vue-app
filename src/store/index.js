@@ -99,7 +99,44 @@ export default createStore({
             username: 'Jim',
             password: 'trainer',
             clubs: [],
-            appointments: []
+            appointments: [],
+            passwordLastChangedDate: new Date('Thu Nov 10 2020 09:52:12 GMT+0000 (Greenwich Mean Time)')
+          },
+          {
+            firstName: 'John',
+            lastName: 'Adams',
+            gender: 'male',
+            age: '40',
+            weight: '185',
+            height: '6.1',
+            address: 'Cork',
+            email: 'trainer2@gmail.com',
+            phoneNumber: '08584012345',
+            status: 'staff', // student, staff, neither
+            membership: 'oneYear', // one year, open ended
+            username: 'trainerJohn',
+            password: 'trainerJohn',
+            clubs: [],
+            appointments: [],
+            passwordLastChangedDate: new Date('Thu Nov 10 2020 09:52:12 GMT+0000 (Greenwich Mean Time)')
+          },
+          {
+            firstName: 'Jane',
+            lastName: 'Lough',
+            gender: 'female',
+            age: '40',
+            weight: '185',
+            height: '6.1',
+            address: 'Cork',
+            email: 'trainer2@gmail.com',
+            phoneNumber: '08584012345',
+            status: 'staff', // student, staff, neither
+            membership: 'oneYear', // one year, open ended
+            username: 'trainerJane',
+            password: 'trainerJane',
+            clubs: [],
+            appointments: [],
+            passwordLastChangedDate: new Date('Thu Nov 10 2020 09:52:12 GMT+0000 (Greenwich Mean Time)')
           }
         ],
       clubs:
@@ -425,16 +462,36 @@ export default createStore({
           commit(types.SET_ISLOGGEDIN, details.username)
         }
       }
-      console.log(getters.getChangePassword)
     },
-    updateClub ({ commit, getters }, { details, clubName }) {
-      console.log('store', details)
+    updateClub ({ commit, getters, dispatch }, { details, clubName }) {
       const userClub = getters.getClubs.map(
         e => e.name
       ).indexOf(clubName)
 
       if (userClub >= 0) {
         commit(types.UPDATE_CLUB, { details, index: userClub })
+      }
+      if (clubName !== details.name) {
+        const allUsers = getters.getUsers({ includeCurrentUser: true })
+        allUsers.forEach(user => {
+          const clubIndex = user.clubs.map(e => e.name).indexOf(clubName)
+          const appointmentIndex = user.appointments.map(e => e.name).indexOf(clubName)
+
+          if (clubIndex !== -1 || appointmentIndex !== -1) {
+            if (clubIndex !== -1) {
+              user.clubs[clubIndex].name = details.name
+            }
+
+            if (appointmentIndex !== -1) {
+              user.appointments[appointmentIndex].name = details.name
+            }
+
+            dispatch('updateUser', {
+              details: user,
+              usernameUpdated: false
+            })
+          }
+        })
       }
     },
     addUserClub ({ commit, getters }, name) {
@@ -478,20 +535,20 @@ export default createStore({
             index: userIndex
           })
         }
-      }
-
-      const currentUserClubs = getters.getLoggedInUser.clubs
-      const index = currentUserClubs.indexOf(
-        currentUserClubs.find(e => e.name === name)
-      )
-      if (index > -1) {
-        currentUserClubs.splice(index, 1)
-        commit(types.UPDATE_USER, {
-          details: {
-            clubs: currentUserClubs
-          },
-          index: userIndex
-        })
+      } else {
+        const currentUserClubs = getters.getLoggedInUser.clubs
+        const index = currentUserClubs.indexOf(
+          currentUserClubs.find(e => e.name === name)
+        )
+        if (index > -1) {
+          currentUserClubs.splice(index, 1)
+          commit(types.UPDATE_USER, {
+            details: {
+              clubs: currentUserClubs
+            },
+            index: userIndex
+          })
+        }
       }
     },
 
@@ -587,6 +644,27 @@ export default createStore({
     },
     getClubs: (state) => {
       return state.types.clubs
+    },
+    getAvailableTrainers: (state, getters) => ({ includeCurrentUser }) => {
+      const clubTrainers = getters.getClubs.map(e => e.trainer)
+      if (includeCurrentUser) {
+        return getters.getUsers({ includeCurrentUser: true })
+          .filter(user => user.status === 'staff' && (!clubTrainers.includes(user.username) || user.username === getters.getLoggedInUserUsername))
+          .map(user => {
+            return {
+              ...user,
+              fullName: `${user.firstName} ${user.lastName}`
+            }
+          })
+      }
+      return getters.getUsers({ includeCurrentUser: true })
+        .filter(user => user.status === 'staff' && !clubTrainers.includes(user.username))
+        .map(user => {
+          return {
+            ...user,
+            fullName: `${user.firstName} ${user.lastName}`
+          }
+        })
     },
     getBreakfast: (state) => {
       return state.types.meals.breakfast

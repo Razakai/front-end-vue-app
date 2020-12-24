@@ -17,6 +17,14 @@ export default {
     getTrainer () {
       const trainer = this.$store.getters.getUserByUsername(this.club.trainer)
       return `${trainer.firstName} ${trainer.lastName}`
+    },
+
+    getLoggedInUser () {
+      return this.$store.getters.getLoggedInUser
+    },
+
+    isUserClubTrainer () {
+      return this.getLoggedInUser.username === this.club.trainer
     }
   },
 

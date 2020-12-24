@@ -25,7 +25,10 @@
             <select class="club-model__content__fields__select__override" name="facilitySelect" v-model="facility">
               <option v-for="item in getFacilities" :key="item" :value="item">{{ item }}</option>
             </select>
-            <TextInput class="club-model__content__fields__input__override" v-model="trainer" :placeholder="'Trainer'"></TextInput>
+            <!--<TextInput class="club-model__content__fields__input__override" v-model="trainer" :placeholder="'Trainer'"></TextInput>-->
+            <select class="club-model__content__fields__select__override" name="trainerSelect" v-model="trainer">
+              <option v-for="item in getAvailableTrainers" :key="item.username" :value="item.username">{{ item.fullName }}</option>
+            </select>
           </div>
         </div>
         <div>
