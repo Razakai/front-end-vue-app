@@ -67,6 +67,8 @@ export default {
             membership: this.membership,
             username: this.username,
             status: this.status,
+            clubs: [],
+            appointments: [],
             password: this.password,
             passwordLastChangedDate: new Date()
           }
