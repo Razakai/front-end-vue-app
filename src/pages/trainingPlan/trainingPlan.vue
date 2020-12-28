@@ -31,13 +31,14 @@
        Calorie count today: {{ totalCalorieIntake }}
       </div>
       <div>
-        <a href="#"
-           onclick="
+        <a href="#" @click="shareOnFacebook">
+          <!-- onclick="
             window.open(
-              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+              `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}&quote=${getQuote}`,
               'facebook-share-dialog',
               'width=626,height=436');
-            return false;">
+            return false;">-->
+
           Share on Facebook
         </a>
       </div>

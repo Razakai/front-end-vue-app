@@ -28,6 +28,8 @@ export default {
       await this.$store.dispatch('login', { username: this.username, password: this.password })
       if (!this.isLoggedIn) {
         this.loginAttempts += 1
+      } else {
+        await this.$router.push('/clubs')
       }
     },
     async logout () {

@@ -9,9 +9,6 @@
         <register class="homeRegister"></register>
       </div>
     </div>
-    <div class="homeFooter">
-      <footer-vue/>
-    </div>
   </main>
 </template>
 <script src="./home.js"></script>

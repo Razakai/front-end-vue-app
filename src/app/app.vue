@@ -3,7 +3,6 @@
     <img src="../assets/citLogo.jpg" height="100" width="200">
     <span v-if="isLoggedIn" class="nav-container">
       <span class="nav-container__left">
-        <router-link to="/" class="router-link">Home</router-link>
         <router-link to="/clubs" class="router-link">Clubs</router-link>
         <router-link to="/bookings" class="router-link">Bookings</router-link>
         <router-link to="/trainingPlan" class="router-link">Training Plan</router-link>
@@ -28,7 +27,7 @@
        </text-input>
       <g-button :disabled="loginAttempts === 3" @click="login"> Login </g-button>
     </span>
-      <div v-if="this.loginAttempts === 3">3 invalid login attempts, You've been locked out</div>
+      <div class="nav__right-lockout" v-if="this.loginAttempts === 3">3 invalid login attempts, You've been locked out</div>
     </div>
   </div>
   <router-view/>

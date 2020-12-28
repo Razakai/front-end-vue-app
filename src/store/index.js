@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import router from '../router'
 import * as types from './mutation-types'
 
 export default createStore({
@@ -606,6 +607,7 @@ export default createStore({
       if (!users) {
         commit(types.CREATE_USER, details)
         commit(types.SET_ISLOGGEDIN, details.username)
+        router.push('/clubs')
       }
     },
     setChangePassword ({ commit }, status) {

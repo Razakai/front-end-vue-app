@@ -41,8 +41,8 @@ export default {
 
       if (this.sortByCalories) {
         return clubs.sort((a, b) => {
-          if (a.calories < b.calories) return 1
-          if (a.calories > b.calories) return -1
+          if (parseInt(a.calories) < parseInt(b.calories)) return 1
+          if (parseInt(a.calories) > parseInt(b.calories)) return -1
           return 0
         })
       }

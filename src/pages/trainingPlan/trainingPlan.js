@@ -51,11 +51,23 @@ export default {
 
     totalCalorieIntake () {
       return this.breakfastCalories + this.lunchCalories + this.dinnerCalories
+    },
+
+    getQuote () {
+      return `Today I burned ${this.currentCalories} calories and have a BRM of ${this.currentBMR}`
     }
 
   },
 
   methods: {
+
+    shareOnFacebook () {
+      window.open(
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}&quote=${this.getQuote}`,
+        'facebook-share-dialog',
+        'width=626,height=436')
+      return false
+    }
 
   }
 

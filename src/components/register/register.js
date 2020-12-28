@@ -73,7 +73,6 @@ export default {
             passwordLastChangedDate: new Date()
           }
         })
-        await this.$router.push('/about')
       }
     },
     getIsLoggedIn () {
